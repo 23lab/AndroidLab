@@ -7,23 +7,31 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".TaskMonitorActivity" >
-
+    
     <Button
-        android:id="@+id/refresh_tasks_btn"
+        android:id="@+id/refresh_app_procs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:text="ReFresh" />
+        android:text="Proccess" />
 
     <TextView
         android:id="@+id/all_tasks_info_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/refresh_tasks_btn"
         android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/refresh_tasks_btn" />
+
+    <Button
+        android:id="@+id/refresh_tasks_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/refresh_app_procs"
+        android:layout_alignBottom="@+id/refresh_app_procs"
+        android:layout_centerHorizontal="true"
+        android:text="Tasks" />
 
 </RelativeLayout>
