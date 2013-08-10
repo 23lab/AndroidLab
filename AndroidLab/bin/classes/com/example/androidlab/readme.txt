@@ -1,0 +1,3 @@
+验证过的问题：
+1. 如果MainActiity用MULTIPLE_TASK+NEW_TASK拉起 FistActivity不会拉起新栈
+2. 如果MainActiity用MULTIPLE_TASK+NEW_TASK拉起 FistActivity，并且FirstActivity设置了TaskAffinity， 则会拉起新栈
