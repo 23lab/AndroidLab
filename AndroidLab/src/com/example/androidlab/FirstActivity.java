@@ -16,8 +16,11 @@ public class FirstActivity extends EhBaseActiity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		setContentView(R.layout.activity_first);
+		
 		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_first);
+		this.initView();
+		this.setListener();
 	}
 
 	@Override
