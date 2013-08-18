@@ -38,6 +38,37 @@
             android:name="com.example.androidlab.TaskMonitorActivity"
             android:label="@string/title_activity_task_monitor" >
         </activity>
+        <activity
+            android:name="com.example.activitykillnoresult.SenderActivity"
+            android:label="@string/title_activity_sender"
+            android:windowSoftInputMode="adjustResize|stateVisible" >
+        </activity>
+        <activity
+            android:name="com.example.activitykillnoresult.NoResultSenderActivity"
+            android:label="@string/title_activity_no_result_sender" >
+        </activity>
+        <activity
+            android:name="com.example.activitykillnoresult.NoResultRecieveActivity"
+            android:label="@string/title_activity_no_result_recieve"
+            android:parentActivityName="com.example.androidlab.EhBaseActiity"
+            android:process=":b_process"
+            android:taskAffinity="com.fuck.sb" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.androidlab.EhBaseActiity" />
+        </activity>
+        <activity
+            android:name="us.stupidx.intent_filter.IntentDashboardActivity"
+            android:label="@string/title_activity_intent_dashboard" >
+        </activity>
+        <activity
+            android:name="us.stupidx.intent_filter.IntentLaunchThisActivity"
+            android:label="@string/title_activity_intent_launch_this"
+            android:parentActivityName="com.example.androidlab.EhBaseActiity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.androidlab.EhBaseActiity" />
+        </activity>
     </application>
 
 </manifest>

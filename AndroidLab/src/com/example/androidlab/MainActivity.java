@@ -24,7 +24,9 @@ public class MainActivity extends EhBaseActiity {
 			"com.example.androidlab.ErrorActivity",
 			"com.example.androidlab.FirstActivity",		
 			"com.example.androidlab.TaskMonitorActivity",		
-			"com.example.androidlab.TestActivityResultActivity",		
+			"com.example.androidlab.TestActivityResultActivity",
+			"com.example.activitykillnoresult.NoResultSenderActivity",
+			"us.stupidx.intent_filter.IntentDashboardActivity"
 	};
 	private Context context;
 
@@ -34,7 +36,6 @@ public class MainActivity extends EhBaseActiity {
 		setContentView(R.layout.activity_main);
 		this.initView();
 		this.setListener();
-		this.setLogLifeCycle(false);
 		this.context = this;
 	}
 

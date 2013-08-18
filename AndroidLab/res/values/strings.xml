@@ -10,5 +10,9 @@
     <string name="checkrunningtasks">CheckRunningTasks</string>
     <string name="title_activity_test_activity_result">TestActivityResultActivity</string>
     <string name="title_activity_task_monitor">TaskMonitorActivity</string>
+    <string name="title_activity_no_result_sender">NoResultSenderActivity</string>
+    <string name="title_activity_no_result_recieve">NoResultRecieveActivity</string>
+    <string name="title_activity_intent_dashboard">IntentDashboardActivity</string>
+    <string name="title_activity_intent_launch_this">IntentLaunchThisActivity</string>
 
 </resources>
