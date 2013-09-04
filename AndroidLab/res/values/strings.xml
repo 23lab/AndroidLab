@@ -14,5 +14,9 @@
     <string name="title_activity_no_result_recieve">NoResultRecieveActivity</string>
     <string name="title_activity_intent_dashboard">IntentDashboardActivity</string>
     <string name="title_activity_intent_launch_this">IntentLaunchThisActivity</string>
+    <string name="title_activity_read_data_app">ReadDataAppActivity</string>
+    <string name="title_activity_android_push_recieve">AndroidPushRecieveActivity</string>
+    <string name="title_activity_socket_client">SocketClientActivity</string>
+    <string name="title_activity_annotation">AnnotationActivity</string>
 
 </resources>

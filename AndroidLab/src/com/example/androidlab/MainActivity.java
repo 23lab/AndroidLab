@@ -26,7 +26,12 @@ public class MainActivity extends EhBaseActiity {
 			"com.example.androidlab.TaskMonitorActivity",		
 			"com.example.androidlab.TestActivityResultActivity",
 			"com.example.activitykillnoresult.NoResultSenderActivity",
-			"us.stupidx.intent_filter.IntentDashboardActivity"
+			"us.stupidx.intent_filter.IntentDashboardActivity",
+			"us.stupidx.filelab.ReadDataAppActivity",
+			"us.stupidx.androidpush.AndroidPushRecieveActivity",
+			"us.stupidx.androidpush.SocketClientActivity",
+			"us.stupdx.annotations.AnnotationActivity",
+			"us.stupdx.annotations.AnnotationActivity_",
 	};
 	private Context context;
 

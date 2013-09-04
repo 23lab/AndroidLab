@@ -10,6 +10,7 @@
 
     <uses-permission android:name="android.permission.GET_TASKS" >
     </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -68,6 +69,26 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.androidlab.EhBaseActiity" />
+        </activity>
+        <activity
+            android:name="us.stupidx.filelab.ReadDataAppActivity"
+            android:label="@string/title_activity_read_data_app"
+            android:parentActivityName="com.example.androidlab.EhBaseActiity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.androidlab.EhBaseActiity" />
+        </activity>
+        <activity
+            android:name="us.stupidx.androidpush.AndroidPushRecieveActivity"
+            android:label="@string/title_activity_android_push_recieve" >
+        </activity>
+        <activity
+            android:name="us.stupidx.androidpush.SocketClientActivity"
+            android:label="@string/title_activity_socket_client" >
+        </activity>
+        <activity
+            android:name="us.stupdx.annotations.AnnotationActivity_"
+            android:label="@string/title_activity_annotation" >
         </activity>
     </application>
 

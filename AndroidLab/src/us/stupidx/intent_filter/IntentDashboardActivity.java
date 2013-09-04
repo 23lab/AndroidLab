@@ -5,6 +5,7 @@ import com.example.androidlab.R;
 import com.example.androidlab.R.layout;
 import com.example.androidlab.R.menu;
 import com.example.androidlab.tools.L;
+import com.example.androidlab.tools.T;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -27,9 +28,15 @@ public class IntentDashboardActivity extends EhBaseActiity {
 	private final static String TAG = IntentDashboardActivity.class.getCanonicalName();
 	private ListView intent_flag_lv;
 	private String[] intentFlags = {
-			"Intent.FLAG_ACTIVITY_NEW_TASK_" + Intent.FLAG_ACTIVITY_NEW_TASK,
-			"Intent.FLAG_ACTIVITY_SINGLE_TOP" + Intent.FLAG_ACTIVITY_SINGLE_TOP,
-			"Intent.FLAG_ACTIVITY_MULTIPLE_TASK" + Intent.FLAG_ACTIVITY_MULTIPLE_TASK,
+			"Intent.FLAG_ACTIVITY_NEW_TASK:" + Intent.FLAG_ACTIVITY_NEW_TASK,
+			"Intent.FLAG_ACTIVITY_SINGLE_TOP:" + Intent.FLAG_ACTIVITY_SINGLE_TOP,
+			"Intent.FLAG_ACTIVITY_MULTIPLE_TASK:" + Intent.FLAG_ACTIVITY_MULTIPLE_TASK,
+			"Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT:" + Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT,
+			"Intent.FLAG_ACTIVITY_CLEAR_TASK:" + Intent.FLAG_ACTIVITY_CLEAR_TASK,
+			"Intent.FLAG_ACTIVITY_MULTIPLE_TASK:" + Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS,
+			"Intent.FLAG_ACTIVITY_MULTIPLE_TASK:" + Intent.FLAG_ACTIVITY_MULTIPLE_TASK,
+			"Intent.FLAG_ACTIVITY_MULTIPLE_TASK:" + Intent.FLAG_ACTIVITY_MULTIPLE_TASK,
+			"Intent.FLAG_ACTIVITY_MULTIPLE_TASK:" + Intent.FLAG_ACTIVITY_MULTIPLE_TASK,
 	};
 	private Button launch_activity_by_flags_btn;
 
@@ -48,11 +55,15 @@ public class IntentDashboardActivity extends EhBaseActiity {
 			@Override
 			public void onClick(View arg0) {
 				SparseBooleanArray checkedList = intent_flag_lv.getCheckedItemPositions();
+				Intent intent = new Intent(IntentDashboardActivity.this, IntentLaunchThisActivity.class);
 				for (int i = 0; i < intentFlags.length; i ++) {
 					if (checkedList.get(i)) {
-						L.d(intentFlags[i]);
+						intent.addFlags(Integer.parseInt(intentFlags[i].split(":")[1]));
+						T.show(IntentDashboardActivity.this, intentFlags[i]);
 					}
 				}
+				
+				startActivity(intent);
 			}
 		});
 	}
