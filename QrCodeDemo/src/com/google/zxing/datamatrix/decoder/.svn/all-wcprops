@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/datamatrix/decoder
+END
+DecodedBitStreamParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 183
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/datamatrix/decoder/DecodedBitStreamParser.java
+END
+BitMatrixParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 176
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/datamatrix/decoder/BitMatrixParser.java
+END
+DataBlock.java
+K 25
+svn:wc:ra_dav:version-url
+V 170
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/datamatrix/decoder/DataBlock.java
+END
+Decoder.java
+K 25
+svn:wc:ra_dav:version-url
+V 168
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/datamatrix/decoder/Decoder.java
+END
+Version.java
+K 25
+svn:wc:ra_dav:version-url
+V 168
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/datamatrix/decoder/Version.java
+END

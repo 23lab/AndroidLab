@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/common/detector
+END
+WhiteRectangleDetector.java
+K 25
+svn:wc:ra_dav:version-url
+V 180
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/common/detector/WhiteRectangleDetector.java
+END
+MonochromeRectangleDetector.java
+K 25
+svn:wc:ra_dav:version-url
+V 185
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/common/detector/MonochromeRectangleDetector.java
+END

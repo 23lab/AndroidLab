@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/oned/rss
+END
+RSS14Reader.java
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/oned/rss/RSS14Reader.java
+END
+FinderPattern.java
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/oned/rss/FinderPattern.java
+END
+DataCharacter.java
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/oned/rss/DataCharacter.java
+END
+RSSUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/oned/rss/RSSUtils.java
+END
+Pair.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/oned/rss/Pair.java
+END
+AbstractRSSReader.java
+K 25
+svn:wc:ra_dav:version-url
+V 168
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/oned/rss/AbstractRSSReader.java
+END

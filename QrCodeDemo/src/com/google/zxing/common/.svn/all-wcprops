@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/common
+END
+BitSource.java
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/common/BitSource.java
+END
+ECI.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/common/ECI.java
+END
+BitMatrix.java
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/common/BitMatrix.java
+END
+DecoderResult.java
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/common/DecoderResult.java
+END
+Comparator.java
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/common/Comparator.java
+END
+DetectorResult.java
+K 25
+svn:wc:ra_dav:version-url
+V 163
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/common/DetectorResult.java
+END
+GridSampler.java
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/common/GridSampler.java
+END
+BitArray.java
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/common/BitArray.java
+END
+DefaultGridSampler.java
+K 25
+svn:wc:ra_dav:version-url
+V 167
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/common/DefaultGridSampler.java
+END
+Collections.java
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/common/Collections.java
+END
+GlobalHistogramBinarizer.java
+K 25
+svn:wc:ra_dav:version-url
+V 173
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/common/GlobalHistogramBinarizer.java
+END
+PerspectiveTransform.java
+K 25
+svn:wc:ra_dav:version-url
+V 169
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/common/PerspectiveTransform.java
+END
+StringUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/common/StringUtils.java
+END
+HybridBinarizer.java
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/common/HybridBinarizer.java
+END
+CharacterSetECI.java
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/common/CharacterSetECI.java
+END

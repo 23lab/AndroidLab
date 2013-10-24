@@ -1,0 +1,209 @@
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/client/result
+END
+ExpandedProductResultParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 183
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/client/result/ExpandedProductResultParser.java
+END
+CalendarParsedResult.java
+K 25
+svn:wc:ra_dav:version-url
+V 176
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/client/result/CalendarParsedResult.java
+END
+ISBNResultParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 172
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/client/result/ISBNResultParser.java
+END
+GeoParsedResult.java
+K 25
+svn:wc:ra_dav:version-url
+V 171
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/client/result/GeoParsedResult.java
+END
+EmailAddressResultParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 180
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/client/result/EmailAddressResultParser.java
+END
+WifiResultParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 172
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/client/result/WifiResultParser.java
+END
+ProductParsedResult.java
+K 25
+svn:wc:ra_dav:version-url
+V 175
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/client/result/ProductParsedResult.java
+END
+ParsedResultType.java
+K 25
+svn:wc:ra_dav:version-url
+V 172
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/client/result/ParsedResultType.java
+END
+AbstractDoCoMoResultParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 182
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/client/result/AbstractDoCoMoResultParser.java
+END
+URLTOResultParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 173
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/client/result/URLTOResultParser.java
+END
+TelParsedResult.java
+K 25
+svn:wc:ra_dav:version-url
+V 171
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/client/result/TelParsedResult.java
+END
+VEventResultParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 174
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/client/result/VEventResultParser.java
+END
+GeoResultParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 171
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/client/result/GeoResultParser.java
+END
+BizcardResultParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 175
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/client/result/BizcardResultParser.java
+END
+ProductResultParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 175
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/client/result/ProductResultParser.java
+END
+URIParsedResult.java
+K 25
+svn:wc:ra_dav:version-url
+V 171
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/client/result/URIParsedResult.java
+END
+AddressBookParsedResult.java
+K 25
+svn:wc:ra_dav:version-url
+V 179
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/client/result/AddressBookParsedResult.java
+END
+TelResultParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 171
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/client/result/TelResultParser.java
+END
+SMSParsedResult.java
+K 25
+svn:wc:ra_dav:version-url
+V 171
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/client/result/SMSParsedResult.java
+END
+SMSTOMMSTOResultParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 178
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/client/result/SMSTOMMSTOResultParser.java
+END
+AddressBookAUResultParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 181
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/client/result/AddressBookAUResultParser.java
+END
+EmailDoCoMoResultParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 179
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/client/result/EmailDoCoMoResultParser.java
+END
+VCardResultParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 173
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/client/result/VCardResultParser.java
+END
+URIResultParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 171
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/client/result/URIResultParser.java
+END
+ParsedResult.java
+K 25
+svn:wc:ra_dav:version-url
+V 168
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/client/result/ParsedResult.java
+END
+AddressBookDoCoMoResultParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 185
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/client/result/AddressBookDoCoMoResultParser.java
+END
+TextParsedResult.java
+K 25
+svn:wc:ra_dav:version-url
+V 172
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/client/result/TextParsedResult.java
+END
+BookmarkDoCoMoResultParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 182
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/client/result/BookmarkDoCoMoResultParser.java
+END
+ExpandedProductParsedResult.java
+K 25
+svn:wc:ra_dav:version-url
+V 183
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/client/result/ExpandedProductParsedResult.java
+END
+ISBNParsedResult.java
+K 25
+svn:wc:ra_dav:version-url
+V 172
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/client/result/ISBNParsedResult.java
+END
+SMSMMSResultParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 174
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/client/result/SMSMMSResultParser.java
+END
+ResultParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 168
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/client/result/ResultParser.java
+END
+EmailAddressParsedResult.java
+K 25
+svn:wc:ra_dav:version-url
+V 180
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/client/result/EmailAddressParsedResult.java
+END
+WifiParsedResult.java
+K 25
+svn:wc:ra_dav:version-url
+V 172
+/bsrv/bsrv_db_rep/!svn/ver/5615/oicq_login_proj/trunk/wlogin_sdk_for_android/wtlogin_sdk_demo_v1/wtlogin_sdk_demo/zxing/com/google/zxing/client/result/WifiParsedResult.java
+END
