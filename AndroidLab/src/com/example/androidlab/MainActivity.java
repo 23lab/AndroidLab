@@ -32,6 +32,7 @@ public class MainActivity extends EhBaseActiity {
 			"us.stupidx.androidpush.SocketClientActivity",
 			"us.stupdx.annotations.AnnotationActivity",
 			"us.stupdx.annotations.AnnotationActivity_",
+			"com.example.androidlab.ParseActivity"
 	};
 	private Context context;
 
