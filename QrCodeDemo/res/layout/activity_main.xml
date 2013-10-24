@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <Button
+        android:id="@+id/recieve_login_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="用二维码登录" />
+
+    <Button
+        android:id="@+id/give_login_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/recieve_login_btn"
+        android:text="扫二维码传递登录" />
+
+    <ImageView
+        android:id="@+id/qr_code_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button2"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/give_login_btn"
+        android:src="@drawable/ic_launcher" />
+
+    <EditText
+        android:id="@+id/openid_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/give_login_btn"
+        android:layout_below="@+id/qr_code_iv"
+        android:ems="10"
+        android:text="openID" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/acctoken_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/openid_et"
+        android:layout_below="@+id/openid_et"
+        android:ems="10"
+        android:text="accessToken" />
+
+</RelativeLayout>

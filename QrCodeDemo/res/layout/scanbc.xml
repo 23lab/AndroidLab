@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@null"
+    >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        android:background="@null" >
+
+        <!-- 相机预览View -->
+
+        <SurfaceView
+            android:id="@+id/preview_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" 
+            android:background="@null" />
+        <!-- 二维码扫描视图 -->
+       	<com.google.zxing.client.android.ViewfinderView
+	    	android:id="@+id/viewfinderview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@null" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutResult"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@null" 
+        >
+        
+        
+        <LinearLayout 
+            android:layout_height="wrap_content" 
+            android:layout_width="fill_parent"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            >
+            <TextView
+                android:id="@+id/prompt"
+	            android:text="扫描二维码" 
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+				android:gravity="center"
+	            android:textSize="20sp"
+	            android:textColor="#ffffff"
+	            android:layout_marginBottom="80dip"
+	            />  
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>
