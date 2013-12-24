@@ -9,11 +9,12 @@
  * Method:    localRef500
  * Signature: ()V
  */JNIEXPORT void JNICALL Java_com_example_jnidemo_MainActivity_localRef500(
-		JNIEnv * env, jclass) {
-	for (int i = 0; i < 500; i++) {
-		LOGD("Java_com_example_jnidemo_MainActivity_localRef500 %d", i);
-		jclass clz = env->FindClass("java/lang/String");
-	}
+        JNIEnv * env, jclass) {
+    for (int i = 0; i < 500; i++) {
+        LOGD("Java_com_example_jnidemo_MainActivity_localRef500 %d", i);
+        jclass clz = env->FindClass("java/lang/String");
+        //		env->DeleteLocalRef(clz);
+    }
 
 }
 
@@ -22,21 +23,23 @@
  * Method:    localRef512
  * Signature: ()V
  */JNIEXPORT void JNICALL Java_com_example_jnidemo_MainActivity_localRef512(
-		JNIEnv * env, jclass) {
-	for (int i = 0; i < 512; i++) {
-		LOGD("Java_com_example_jnidemo_MainActivity_localRef512 %d", i);
-		jclass clz = env->FindClass("java/lang/String");
-	}
+        JNIEnv * env, jclass) {
+    for (int i = 0; i < 512; i++) {
+        LOGD("Java_com_example_jnidemo_MainActivity_localRef512 %d", i);
+        jclass clz = env->FindClass("java/lang/String");
+        //      env->DeleteLocalRef(clz);
+    }
 }
 
 /*
  * Class:     com_example_jnidemo_MainActivity
  * Method:    localRef256
  * Signature: ()V
- */JNIEXPORT void JNICALL Java_com_example_jnidemo_MainActivity_localRef256(JNIEnv * env,
-		jclass) {
-	for (int i = 0; i < 256; i++) {
-		LOGD("Java_com_example_jnidemo_MainActivity_localRef256 %d", i);
-		jclass clz = env->FindClass("java/lang/String");
-	}
+ */JNIEXPORT void JNICALL Java_com_example_jnidemo_MainActivity_localRef256(
+        JNIEnv * env, jclass) {
+    for (int i = 0; i < 256; i++) {
+        LOGD("Java_com_example_jnidemo_MainActivity_localRef256 %d", i);
+        jclass clz = env->FindClass("java/lang/String");
+        //      env->DeleteLocalRef(clz);
+    }
 }
