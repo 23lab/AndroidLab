@@ -12,22 +12,22 @@ var HEAD = 1;
 var TAIL = 4;
 var sockList = [];
 net.createServer(options, function(sock) {
-	// Store all sock when connected
+    // Store all sock when connected
     sockList.push(sock);
 
-	// push all data into buf first, and then decode from it
+    // push all data into buf first, and then decode from it
     var buf = "";
     sock.on('data', function(data) {
         buf += data;
 
-		// find the msg head & tail
+        // find the msg head & tail
         var C_A_pos = buf.search(String.fromCharCode(HEAD));
         var C_D_pos = buf.search(String.fromCharCode(TAIL));
 
-		// if head and tail r found
+        // if head and tail r found
         if (C_A_pos !== -1 && C_D_pos !== -1 && C_A_pos < C_D_pos) {
-			
-			// maybe multiple msg in buf
+            
+            // maybe multiple msg in buf
             while (C_A_pos !== -1 && C_D_pos !== -1 && C_A_pos < C_D_pos) {
                 console.log(buf);
                 var rawData = buf.substr(C_A_pos + 1, C_D_pos - C_A_pos - 1);
@@ -46,14 +46,14 @@ net.createServer(options, function(sock) {
                         });
                     }
                 }
-				
-				// discard msg from buf if it is decoded succ
+                
+                // discard msg from buf if it is decoded succ
                 buf = buf.substr(C_D_pos + 1);
                 C_A_pos = buf.search(String.fromCharCode(HEAD));
                 C_D_pos = buf.search(String.fromCharCode(TAIL));
             }
         } else { 
-			// clear buf if protocol error
+            // clear buf if protocol error
             console.log("data protocol error!");
             buf = "";
         }
