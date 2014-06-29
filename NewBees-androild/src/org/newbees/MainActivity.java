@@ -16,7 +16,7 @@ import com.github.kevinsawicki.wishlist.Toaster;
 public class MainActivity extends Activity {
 
 	private static final int PORT = 8111;
-	private static final String DOMAIN = "198.52.100.190";
+	private static final String HOST = "198.52.100.190";
 
 	private NBSocket skt;
 
@@ -25,8 +25,7 @@ public class MainActivity extends Activity {
 			@Override
 			public void run() {
 				try {
-					skt = new NBSocket(DOMAIN, PORT);
-					skt.startListenRsp(new RspListener() {
+					skt = new NBSocket(new RspListener() {
 						@Override
 						public void onData(final String data) {
 							Log.d("NewBees", "Server Rsp: " + data);
@@ -37,7 +36,13 @@ public class MainActivity extends Activity {
 								}
 							});
 						}
+
+						@Override
+						public void onConnection(String socketName) {
+							Toaster.showShort(MainActivity.this, socketName + " Connected!");
+						}
 					});
+					skt.connect(HOST, PORT);
 				} catch (UnknownHostException e) {
 					e.printStackTrace();
 				} catch (IOException e) {
