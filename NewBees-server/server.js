@@ -10,24 +10,33 @@ var options = {
 };
 var HEAD = 1;
 var TAIL = 4;
-var sockList = [];
+var sockList = {};
 net.createServer(options, function(sock) {
-    // Store all sock when connected
-    sockList.push(sock);
+    sock.name = sock.remoteAddress + ":" + sock.remotePort 
 
-    // push all data into buf first, and then decode from it
+    var connectionRsp = {
+        cmd: "conn_rsp",
+        clientId: sock.name
+    };
+
+    sock.write(encode(JSON.stringify(connectionRsp)), "UTF-8", function () {
+        console.log("Connection Rsp inished!");
+    });
+
+    // put socket into array, use socket name as key
+    var obj = {};
+    sockList[sock.name] = sock;
+
+    console.log("========================================");
+    console.log(sock);
+    console.log("========================================");
+    console.log('CONNECTED: ' + sock.remoteAddress + ':' + sock.remotePort);
     var buf = "";
     sock.on('data', function(data) {
         buf += data;
-
-        // find the msg head & tail
         var C_A_pos = buf.search(String.fromCharCode(HEAD));
         var C_D_pos = buf.search(String.fromCharCode(TAIL));
-
-        // if head and tail r found
         if (C_A_pos !== -1 && C_D_pos !== -1 && C_A_pos < C_D_pos) {
-            
-            // maybe multiple msg in buf
             while (C_A_pos !== -1 && C_D_pos !== -1 && C_A_pos < C_D_pos) {
                 console.log(buf);
                 var rawData = buf.substr(C_A_pos + 1, C_D_pos - C_A_pos - 1);
@@ -37,23 +46,24 @@ net.createServer(options, function(sock) {
                 if (length !== rawData.length) {
                     console.log("length dismatch");
                 } else {
+                    // Get a valid msg
                     var msg = rawData.substr(6);
                     console.log(sock.remotePort + ":" + sock.remotePort + ": " + msg);
                     console.log(sockList.length);
-                    for (var index in sockList) {
-                        sockList[index].write(encode("rsp: " + msg), "UTF-8", function () {
-                            console.log("send to client finished!");
-                        });
-                    }
+
+                    // broadcast
+                    broadcast(msg);
+
+                    // convert origin msg to a well formed msg
+                    var jsonMsg = new NBMsg(msg);
+                    console.log("====================");
+                    console.log(jsonMsg);
                 }
-                
-                // discard msg from buf if it is decoded succ
                 buf = buf.substr(C_D_pos + 1);
                 C_A_pos = buf.search(String.fromCharCode(HEAD));
                 C_D_pos = buf.search(String.fromCharCode(TAIL));
             }
-        } else { 
-            // clear buf if protocol error
+        } else { // clear buf
             console.log("data protocol error!");
             buf = "";
         }
@@ -61,8 +71,8 @@ net.createServer(options, function(sock) {
     });
 
     sock.on('close', function(data) {
-        console.log('CLOSED' + sockList.indexOf(sock));
-        sockList.splice(sockList.indexOf(sock));
+        console.log('CLOSED' + sock.name);
+        delete sockList[sock.name]; 
         console.log(data);
     });
 
@@ -73,13 +83,40 @@ net.createServer(options, function(sock) {
 
 console.log('Server listening on ' + HOST +':'+ PORT);
 
-/**
- * encoding msg, C_A + length(not include C_A & C_D, 6 bytes) + C_D
- */
 function encode(msg) {
     var length = 6 + msg.length;
     var alignLength = ("000000" + length).slice(-6);
     var result = String.fromCharCode(HEAD) + alignLength + msg + String.fromCharCode(TAIL);
     console.log(result);
     return result;
+}
+
+function broadcast(msg) {
+    console.log(sockList);
+    for (var index in sockList) {
+        sockList[index].write(encode("rsp: " + msg), "UTF-8", function () {
+            console.log("send to client " + index + " finished!");
+        });
+    }
+}
+
+function NBMsg(msg){
+    // encode Msg
+    try{
+        var msgJson = JSON.parse(msg);
+        console.log(msgJson);
+        this.cmd = msgJson.cmd;
+        this.target = msgJson.target;
+        this.params = msgJson.params;
+    }catch(e){
+        console.log("myJson not a json");
+    }
+}
+
+NBMsg.prototype.dispatch = function () {
+    if (this.target == undefined || this.target == "") {
+        console.log("No Target !!");
+    } else {
+
+    }
 }
