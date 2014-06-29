@@ -12,14 +12,22 @@ var HEAD = 1;
 var TAIL = 4;
 var sockList = [];
 net.createServer(options, function(sock) {
+	// Store all sock when connected
     sockList.push(sock);
-    console.log('CONNECTED: ' + sock.remoteAddress + ':' + sock.remotePort);
+
+	// push all data into buf first, and then decode from it
     var buf = "";
     sock.on('data', function(data) {
         buf += data;
+
+		// find the msg head & tail
         var C_A_pos = buf.search(String.fromCharCode(HEAD));
         var C_D_pos = buf.search(String.fromCharCode(TAIL));
+
+		// if head and tail r found
         if (C_A_pos !== -1 && C_D_pos !== -1 && C_A_pos < C_D_pos) {
+			
+			// maybe multiple msg in buf
             while (C_A_pos !== -1 && C_D_pos !== -1 && C_A_pos < C_D_pos) {
                 console.log(buf);
                 var rawData = buf.substr(C_A_pos + 1, C_D_pos - C_A_pos - 1);
@@ -38,11 +46,14 @@ net.createServer(options, function(sock) {
                         });
                     }
                 }
+				
+				// discard msg from buf if it is decoded succ
                 buf = buf.substr(C_D_pos + 1);
                 C_A_pos = buf.search(String.fromCharCode(HEAD));
                 C_D_pos = buf.search(String.fromCharCode(TAIL));
             }
-        } else { // clear buf
+        } else { 
+			// clear buf if protocol error
             console.log("data protocol error!");
             buf = "";
         }
@@ -62,6 +73,9 @@ net.createServer(options, function(sock) {
 
 console.log('Server listening on ' + HOST +':'+ PORT);
 
+/**
+ * encoding msg, C_A + length(not include C_A & C_D, 6 bytes) + C_D
+ */
 function encode(msg) {
     var length = 6 + msg.length;
     var alignLength = ("000000" + length).slice(-6);
