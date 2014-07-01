@@ -3,10 +3,11 @@ package org.newbees.socket;
 import java.util.Locale;
 
 public class Protocol {
-	public static final char C_A = 0x0001;
+	public static final char C_A = 0x0001; // start of a msg
 	public static final char C_B = 0x0002;
 	public static final char C_C = 0x0003;
-	public static final char C_D = 0x0004;
+	public static final char C_D = 0x0004; // start of a msg
+	public static final int MAX_MSG_LENGTH = 4096;
 
 	// 协议中有6位来表示长度
 	public static final int LENGTH_SPACE = 6;

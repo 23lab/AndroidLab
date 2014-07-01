@@ -3,6 +3,7 @@ package org.newbees;
 import java.io.IOException;
 import java.net.UnknownHostException;
 
+import org.newbees.socket.NBMsg;
 import org.newbees.socket.NBSocket;
 import org.newbees.socket.NBSocket.RspListener;
 
@@ -27,7 +28,7 @@ public class MainActivity extends Activity {
 				try {
 					skt = new NBSocket(new RspListener() {
 						@Override
-						public void onData(final String data) {
+						public void onData(final NBMsg data) {
 							Log.d("NewBees", "Server Rsp: " + data);
 							MainActivity.this.runOnUiThread(new Runnable() {
 								@Override
@@ -38,8 +39,8 @@ public class MainActivity extends Activity {
 						}
 
 						@Override
-						public void onConnection(String socketName) {
-							Toaster.showShort(MainActivity.this, socketName + " Connected!");
+						public void onConnection(final NBMsg msg) {
+							Toaster.showShort(MainActivity.this, msg.getParam("clientId") + " Connected!");
 						}
 					});
 					skt.connect(HOST, PORT);
