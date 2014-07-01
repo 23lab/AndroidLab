@@ -15,7 +15,7 @@ net.createServer(options, function(sock) {
     sock.name = sock.remoteAddress + ":" + sock.remotePort 
 
     var connectionRsp = {
-        cmd: "conn_rsp",
+        cmd: "connection",
         clientId: sock.name
     };
 
@@ -32,6 +32,19 @@ net.createServer(options, function(sock) {
     console.log("========================================");
     console.log('CONNECTED: ' + sock.remoteAddress + ':' + sock.remotePort);
     var buf = "";
+    var STATE_WAITING_FOR_START = 0;
+    var STATE_WAITING_FOR_END = 1;
+    var state = STATE_WAITING_FOR_START;
+    var HEAD_POS = -1;
+
+    function process(chr, index) {
+        for (int i = 0; i < buf.length; i++) {
+            if (chr === String.fromCharCode(HEAD)) {
+                state = STATE_WAITING_FOR_END;
+            }
+        }
+
+    }
     sock.on('data', function(data) {
         buf += data;
         var C_A_pos = buf.search(String.fromCharCode(HEAD));
