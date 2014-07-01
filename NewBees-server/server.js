@@ -14,6 +14,15 @@ var sockList = {};
 net.createServer(options, function(sock) {
     sock.name = sock.remoteAddress + ":" + sock.remotePort 
 
+    sock.onData = function (nbMsg){
+        console.log("onData: ");
+        console.log(nbMsg);
+    };
+
+    sock.onConnection = function (nbMsg){
+        console.log("onConnection: ");
+        console.log(nbMsg);
+    };
     var connectionRsp = {
         cmd: "connection",
         clientId: sock.name
@@ -27,26 +36,68 @@ net.createServer(options, function(sock) {
     var obj = {};
     sockList[sock.name] = sock;
 
-    console.log("========================================");
-    console.log(sock);
-    console.log("========================================");
     console.log('CONNECTED: ' + sock.remoteAddress + ':' + sock.remotePort);
     var buf = "";
     var STATE_WAITING_FOR_START = 0;
     var STATE_WAITING_FOR_END = 1;
     var state = STATE_WAITING_FOR_START;
-    var HEAD_POS = -1;
 
-    function process(chr, index) {
-        for (int i = 0; i < buf.length; i++) {
-            if (chr === String.fromCharCode(HEAD)) {
-                state = STATE_WAITING_FOR_END;
+    function process(data) {
+        var oldBufLenth = buf.length;
+        buf += data;
+
+        for (var i = buf.length; i < data.length; i++) {
+            if (buf.charAt(i) === String.fromCharCode(HEAD)) {
+                // change status if only it is waiting for start Flag
+                if (state == STATE_WAITING_FOR_START) {
+                    // delete the chars before C_A
+                    buf = buf.substr(i + 1, buf.length);
+
+                    // restore index
+                    i = 0;
+                    
+                    // change state, waiting for C_D
+                    state = STATE_WAITING_FOR_END;
+                    continue;
+                }
+            } else if (buf.charAt(i) === String.fromCharCode(TAIL)) {
+                if (state == STATE_WAITING_FOR_END) {
+                    // cut the decoded msg
+                    var rawData = buf.substr(0, i);
+                    var msg = rawData.substr(6);
+                    console.log("rawData: " + rawData);
+                    console.log("msg: " + msg);
+
+                    // broadcast
+                    // broadcast(msg);
+
+                    // convert origin msg to a well formed msg
+                    var jsonMsg = new NBMsg(msg);
+                    if (jsonMsg.cmd === "connection") {
+                        sock.onConnection(nbMsg);
+                        continue;
+                    } else {
+                        sock.onData(nbMsg);
+                        console.log("jsonMsg");
+                        console.log(jsonMsg);
+                    }
+                    console.log("====================");
+                    console.log(jsonMsg);
+
+                    // delete the chars before C_D
+                    buf = buf.substr(i + 1, buf.length);
+
+                    // restore state
+                    state = STATE_WAITING_FOR_START;
+                    continue;
+                }
             }
         }
 
     }
     sock.on('data', function(data) {
-        buf += data;
+        process(data);
+        /**
         var C_A_pos = buf.search(String.fromCharCode(HEAD));
         var C_D_pos = buf.search(String.fromCharCode(TAIL));
         if (C_A_pos !== -1 && C_D_pos !== -1 && C_A_pos < C_D_pos) {
@@ -81,6 +132,7 @@ net.createServer(options, function(sock) {
             buf = "";
         }
         console.log('buf: ' + buf);
+        */
     });
 
     sock.on('close', function(data) {
