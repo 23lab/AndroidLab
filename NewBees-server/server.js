@@ -13,19 +13,17 @@ var TAIL = 4;
 var sockList = {};
 net.createServer(options, function(sock) {
     sock.name = sock.remoteAddress + ":" + sock.remotePort 
-
-    sock.onData = function (nbMsg){
-        console.log("onData: ");
-        console.log(nbMsg);
-    };
-
-    sock.onConnection = function (nbMsg){
-        console.log("onConnection: ");
-        console.log(nbMsg);
-    };
+    // this will be return to client when the client connected
     var connectionRsp = {
         cmd: "connection",
         clientId: sock.name
+    };
+
+
+    // register two callback, when a msg resieved(not some raw data)
+    sock.onData = function (nbMsg){
+        console.log("onData: ");
+        console.log(nbMsg);
     };
 
     sock.write(encode(JSON.stringify(connectionRsp)), "UTF-8", function () {
@@ -46,7 +44,7 @@ net.createServer(options, function(sock) {
         var oldBufLenth = buf.length;
         buf += data;
 
-        for (var i = buf.length; i < data.length; i++) {
+        for (var i = oldBufLenth; i < data.length; i++) {
             if (buf.charAt(i) === String.fromCharCode(HEAD)) {
                 // change status if only it is waiting for start Flag
                 if (state == STATE_WAITING_FOR_START) {
@@ -68,21 +66,9 @@ net.createServer(options, function(sock) {
                     console.log("rawData: " + rawData);
                     console.log("msg: " + msg);
 
-                    // broadcast
-                    // broadcast(msg);
-
                     // convert origin msg to a well formed msg
                     var jsonMsg = new NBMsg(msg);
-                    if (jsonMsg.cmd === "connection") {
-                        sock.onConnection(nbMsg);
-                        continue;
-                    } else {
-                        sock.onData(nbMsg);
-                        console.log("jsonMsg");
-                        console.log(jsonMsg);
-                    }
-                    console.log("====================");
-                    console.log(jsonMsg);
+                    sock.onData(jsonMsg);
 
                     // delete the chars before C_D
                     buf = buf.substr(i + 1, buf.length);
@@ -97,42 +83,6 @@ net.createServer(options, function(sock) {
     }
     sock.on('data', function(data) {
         process(data);
-        /**
-        var C_A_pos = buf.search(String.fromCharCode(HEAD));
-        var C_D_pos = buf.search(String.fromCharCode(TAIL));
-        if (C_A_pos !== -1 && C_D_pos !== -1 && C_A_pos < C_D_pos) {
-            while (C_A_pos !== -1 && C_D_pos !== -1 && C_A_pos < C_D_pos) {
-                console.log(buf);
-                var rawData = buf.substr(C_A_pos + 1, C_D_pos - C_A_pos - 1);
-                var length = parseInt(rawData.substr(0, 6)) + 0;
-                console.log("RawData length: " + length);
-                console.log("RawData data: " + rawData);
-                if (length !== rawData.length) {
-                    console.log("length dismatch");
-                } else {
-                    // Get a valid msg
-                    var msg = rawData.substr(6);
-                    console.log(sock.remotePort + ":" + sock.remotePort + ": " + msg);
-                    console.log(sockList.length);
-
-                    // broadcast
-                    broadcast(msg);
-
-                    // convert origin msg to a well formed msg
-                    var jsonMsg = new NBMsg(msg);
-                    console.log("====================");
-                    console.log(jsonMsg);
-                }
-                buf = buf.substr(C_D_pos + 1);
-                C_A_pos = buf.search(String.fromCharCode(HEAD));
-                C_D_pos = buf.search(String.fromCharCode(TAIL));
-            }
-        } else { // clear buf
-            console.log("data protocol error!");
-            buf = "";
-        }
-        console.log('buf: ' + buf);
-        */
     });
 
     sock.on('close', function(data) {
