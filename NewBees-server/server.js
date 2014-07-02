@@ -24,6 +24,13 @@ net.createServer(options, function(sock) {
     sock.onData = function (nbMsg){
         console.log("onData: ");
         console.log(nbMsg);
+        if (nbMsg.target != undefined && nbMsg.target != "") {
+            if (sockList[target]) {
+                sockList[target].write(encode(JSON.stringify(nbMsg)), function() {
+                    console.log("msg send to " + target);
+                });
+            }
+        }
     };
 
     sock.write(encode(JSON.stringify(connectionRsp)), "UTF-8", function () {
