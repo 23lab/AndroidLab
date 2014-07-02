@@ -68,9 +68,6 @@ net.createServer(options, function(sock) {
                     console.log("rawData: " + rawData);
                     console.log("msg: " + msg);
 
-                    // broadcast
-                    // broadcast(msg);
-
                     // convert origin msg to a well formed msg
                     var jsonMsg = new NBMsg(msg);
                     if (jsonMsg.cmd === "connection") {
